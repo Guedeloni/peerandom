@@ -1,0 +1,81 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: rgb(50,50,50);
+}
+
+
+/*********/
+/* Fonts */
+/*********/
+@font-face {
+  font-family: TitleFont;
+  src:  url('fonts/Caviar-Dreams/CaviarDreams.ttf');
+}
+@font-face {
+  font-family: TextFontLight;
+  src: url('fonts/fira-code/static/FiraCode-Light.ttf');
+}
+@font-face {
+  font-family: TextFontBold;
+  src: url('fonts/fira-code/static/FiraCode-SemiBold.ttf');
+}
+h1 {
+  font-family: TitleFont;
+}
+h2, p {
+  font-family: TextFontLight;
+}
+
+h1, h2 {
+  font-weight: 400;
+  color: rgb(250,250,250);
+}
+
+h1, h2 {
+  letter-spacing: 0.5em;
+}
+
+h1 {
+  font-size: 3em;
+  /* text-align: center; */
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  color: rgb(150,150,150);
+}
+
+
+/************/
+/* Pictures */
+/************/
+#avatar {
+  width: 5em;
+  height: 5em;
+  object-fit: cover;
+  border-radius: 33%;
+  margin-right: 5em;
+}
+
+
+/*******/
+/* Div */
+/*******/
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
