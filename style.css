@@ -79,3 +79,7 @@ p {
   align-items: center;
   padding: 1em;
 }
+
+#result {
+  list-style: none;
+}
