@@ -1,18 +1,21 @@
+import { showMSG, validField } from './javascript/valid.js';
+
 // const form = document.getElementById('form');
 const form = document.forms[0];
 
 // Count nb of fields
 let fieldNumber = 3;
 
-// Test if each field is different from the other
-const validField = (array) => {
-  // Compare nb of unique values and nb of form elements (minus submit button)
-  return (new Set(array)).size === (form.elements.length - 1);
-}
+// Display msg
+// const showMSG = (msg) => {
+//   alert(msg);
+// }
 
-const showMSG = (msg) => {
-  alert(msg);
-}
+// Test if each field is different from the other
+// const validField = (array) => {
+//   // Compare nb of unique values and nb of form elements (minus submit button)
+//   return (new Set(array)).size === (form.elements.length - 1);
+// }
 
 // *******************
 // Execute random draw
