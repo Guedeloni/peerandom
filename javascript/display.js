@@ -22,5 +22,11 @@ const displayResult = (result, array) => {
   }
 }
 
-export { cleanOldResult, displayResult };
+// Clean fields
+const cleanFields = (form, fieldNumber) => {
+  for (let i = 0; i < fieldNumber; i++) {
+    form.elements[i].value = '';
+  };
+}
 
+export { cleanOldResult, displayResult, cleanFields };

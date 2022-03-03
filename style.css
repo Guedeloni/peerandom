@@ -40,7 +40,6 @@ h1, h2 {
 
 h1 {
   font-size: 3em;
-  /* text-align: center; */
 }
 
 h2 {
@@ -56,12 +55,27 @@ p {
 /************/
 /* Pictures */
 /************/
-#avatar {
+#picture {
+  width: 100%;
+}
+
+
+/**********/
+/* Button */
+/**********/
+.button {
+  background-color: rgb(50,50,50);
+  border: 1px solid red;
   width: 5em;
   height: 5em;
-  object-fit: cover;
-  border-radius: 33%;
-  margin-right: 5em;
+  border-radius: 50%;
+  color: rgb(250,250,250);
+  box-shadow: 0 0 3px rgb(150,150,150);
+}
+.button:hover {
+  box-shadow: inset 0 0 2px rgb(150,150,150);
+  cursor: pointer;
+  transition: 0.5s ease-out;
 }
 
 
@@ -73,13 +87,37 @@ p {
   margin: 0 auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.box-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 #header {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   padding: 1em;
 }
 
 #result {
   list-style: none;
+}
+
+
+/**************/
+/* Composants */
+/**************/
+.card {
+  width: 33%;
+  margin-right: 5em;
+}
+
+.field {
+  height: 3em;
+  background-color: rgb(150,150,150);
+  color: rgb(250,250,250);
 }
