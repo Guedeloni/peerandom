@@ -25,8 +25,15 @@ const displayResult = (result, array) => {
 // Clean fields
 const cleanFields = (form, fieldNumber) => {
   for (let i = 0; i < fieldNumber; i++) {
-    form.elements[i].value = '';
+    if (i > 2) {
+      console.log('Remove');
+      let n = i + 1;
+      form.classList.remove(`field-${n}`);
+    } else {
+      form.elements[i].value = '';
+    }
   };
+  return fieldNumber;
 }
 
 export { cleanOldResult, displayResult, cleanFields };

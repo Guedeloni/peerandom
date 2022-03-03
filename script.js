@@ -14,16 +14,22 @@ let fieldNumber = 3;
 // EXECUTE RANDOM DRAW
 form.addEventListener('submit', (event) => {
   console.log('Submit');
+  console.log(fieldNumber);
   event.preventDefault();
 
   // Get value of each field
+  let nullField = false;
   const fieldArray = [];
-  for (let i = 0; i < fieldNumber; i++) {
-    fieldArray[i] = form.elements[i].value;
+  let i = 0;
+  while (!nullField && i < fieldNumber) {
+    if (form.elements[i].value != '') {
+      fieldArray[i] = form.elements[i].value;
+      i += 1;
+    } else {nullField = true;}
   };
 
   // Test validity of data and form submission
-  if (validField(fieldArray, fieldNumber)) {
+  if (!nullField && validField(fieldArray)) {
     console.log('Champs valides');
 
     // Random distribution
@@ -46,6 +52,17 @@ form.addEventListener('submit', (event) => {
 const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', (event) => {
   console.log('Click reset');
-  cleanFields(form, fieldNumber);
+  console.log(fieldNumber);
+  fieldNumber = cleanFields(form, fieldNumber);
   cleanOldResult(result);
+})
+
+
+// ADD NAME
+const list = document.getElementById('fields');
+const addButton = document.getElementById('add');
+addButton.addEventListener('click', (event) => {
+  fieldNumber += 1;
+  list.insertAdjacentHTML('beforeend',
+  `<input class="field" type="text" name="field-${fieldNumber}">`);
 })

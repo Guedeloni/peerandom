@@ -4,9 +4,9 @@ const showMSG = (msg) => {
 }
 
 // Test if each field is different from the other
-const validField = (array, fieldNumber) => {
+const validField = (array) => {
   // Compare nb of unique values and nb of field
-  return (new Set(array)).size === fieldNumber;
+  return (new Set(array)).size === array.length;
 }
 
 
