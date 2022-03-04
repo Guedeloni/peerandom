@@ -40,6 +40,8 @@ form.addEventListener('submit', (event) => {
     cleanOldResult(result);
     // Display results
     displayResult(result, randomFieldArray);
+    // Scroll to results
+    result.scrollIntoView({behavior: 'smooth'});
   }
   else {
     console.log('Pb. sur validation des champs');

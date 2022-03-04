@@ -25,10 +25,8 @@ const displayResult = (result, array) => {
 // Clean fields
 const cleanFields = (form, fieldNumber) => {
   for (let i = 0; i < fieldNumber; i++) {
-    if (i > 2) {
-      console.log('Remove');
-      let n = i + 1;
-      form.classList.remove(`field-${n}`);
+    if (i > 2) {  // Reset with just 3 fields
+      form.querySelector(`input[name='field-${i+1}']`).remove();
     } else {
       form.elements[i].value = '';
     }
